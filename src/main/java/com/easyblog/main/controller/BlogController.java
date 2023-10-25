@@ -23,6 +23,12 @@ public class BlogController {
     private final ProfileServiceImpl profileServiceImpl;
     @Autowired
     private final ArticleServiceImpl articleServiceImpl;
+
+    @GetMapping(value = "/test")
+    @ResponseBody
+    public String getArticleByUserId() {
+        return "Hello Akash Gaikwad!";
+    }
     @RequestMapping(method = RequestMethod.POST, value = "/signup")
     @ResponseBody
     public ResponseEntity<UserProfileDao> createUserProfile(@RequestBody UserProfileDao request){
