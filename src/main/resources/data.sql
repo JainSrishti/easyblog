@@ -1,4 +1,7 @@
 
+DROP TABLE articles;
+DROP TABLE userprofile;
+
 CREATE TABLE IF NOT EXISTS userprofile (
         id INTEGER NOT NULL AUTO_INCREMENT,
         name VARCHAR(50),
