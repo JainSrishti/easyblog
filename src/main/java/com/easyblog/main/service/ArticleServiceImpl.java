@@ -95,7 +95,7 @@ public class ArticleServiceImpl implements ArticleService {
         Optional<UserProfile> profile = userProfileRepository.findById(userid);
         if(profile.isPresent()) {
                 List<String> userInterests = profile.get().getInterests();
-                List<Articles> articles = articlesRepository.findAll();
+                List<Articles> articles = articlesRepository.findByTitleContaining("Java");
                 //logic of filter interest articles;
                 //articles.stream().filter(article -> article.getContent().contains(userInterests.stream().)).collect(Collectors.toList())
            return AddArticleResponseDao.

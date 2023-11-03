@@ -6,16 +6,19 @@ import com.easyblog.main.repository.UserProfileRepository;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-@AllArgsConstructor
 @Builder
 @Service
+@RequiredArgsConstructor
 public class ProfileServiceImpl implements ProfileService {
 
+    @Autowired
     private final UserProfileRepository userProfileRepository;
     public UserProfileDao signUp(UserProfileDao profile) {
         UserProfile userProfile = UserProfile.builder()

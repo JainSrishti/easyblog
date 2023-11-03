@@ -1,9 +1,6 @@
 package com.easyblog.main.repository;
 
 import com.easyblog.main.model.Articles;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.TypedQuery;
-import jakarta.persistence.criteria.*;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
 
@@ -11,9 +8,9 @@ import java.util.List;
 
 @Repository
 @AllArgsConstructor
-public class ArticlesCustomRepositoryImpl implements ArticlesCustomRepository{
+public class ArticlesCustomRepositoryImpl {
 
-    private final EntityManager entityManager;
+/*    private final EntityManager entityManager;
     @Override
     public List<Articles> findByUserId(Integer userid) {
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
@@ -61,5 +58,5 @@ public class ArticlesCustomRepositoryImpl implements ArticlesCustomRepository{
 
         // perform update
         entityManager.createQuery(update).executeUpdate();
-    }
+    }*/
 }
